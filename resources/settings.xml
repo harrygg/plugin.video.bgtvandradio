@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+	<category label="Общи">
+		<setting type="bool" id="use_local_db" label="Използвай локален файл с ТВ база данни" default="false" />
+    <setting type="file" label="Път до файла с базата данни" values="resources" id="db_file_path" mask="" visible="eq(-1,true)" />
+		<setting type="bool" id="show_disabled" label="Показвай деактивирани канали" default="false" />
+    <setting type="sep" />
+    <setting label="Порт на бекенда:" type="text" id="port" default="18911" />
+    <setting type="sep" />
+		<setting type="bool" id="auto_generate_playlist" label="Автоматично генерирай плейлиста с канали" default="true" />
+    <setting label="Генерирай плейлиста на всеки N часа" type="slider" id="run_on_interval" visible="eq(-1,true)" default="12" range="1,1,24" option="int"/>
+    <setting type="sep" />
+		<setting type="bool" id="debug" label="Разреши разширен лог" default="false" />
+    <setting type="lsep" label="Натисни за да обновиш ръчно базата данни с канали" />
+    <setting type="action" label="Обнови" action="RunPlugin(plugin://plugin.video.freebgtvs/?action=update_tvdb)" />
+    <setting label="УРЛ до базата данни с канали" id="url_db" type="text" visible="false" default="http://github.com/harrygg/plugin.video.free.bgtvs/raw/master/resources/tv.db" />
+	</category>
+</settings>
